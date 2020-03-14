@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Map Display</title>
+    <link rel="stylesheet" href="./leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="./button.css">
+    <script src="./leaflet/leaflet.js"></script>
+    <script src="./map_display.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script src = "map_display.js"></script>
+
+    <form class="sample1Area" id="makeImg" name="switch">
+        <input type="radio" name="sample1radio" id="sample1on" checked="">
+        <label for="sample1on">OR</label>
+        <input type="radio" name="sample1radio" id="sample1off">
+        <label for="sample1off">AND</label>
+    </form>
+
+    <form name = "form" class="TasteCheckbox">
+
+        <label id="form4"  method="get">
+            <input id="sbox4"  id="s" name="s" type="text" placeholder=" 店名を入力してください" />
+            <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+        </label>
+
+        <label>
+            <h3>Genre</h3>
+            <input type="checkbox" name="TasteSelect" value="ramen" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">ラーメン</span>
+        </label>
+        <label>
+            <input type="checkbox" name="TasteSelect"  value="tsukemen" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">つけ麺</span>
+        </label>
+        <label>
+            <input type="checkbox" name="TasteSelect"  value="aburasoba" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">油そば</span>
+        </label>
+        <label>
+            <input type="checkbox" name="TasteSelect"  value="mazesoba" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">まぜそば</span>
+        </label>
+
+        <br>
+
+        <label>
+            <h3>Price</h3>
+            <input type="checkbox" name="PriceSelect"  value="low" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">安い</span>
+        </label>
+        <label>
+            <input type="checkbox" name="PriceSelect"  value="middle" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">普通</span>
+        </label>
+        <label>
+            <input type="checkbox" name="PriceSelect"  value="high" class="TasteCheckbox-input">
+            <span class="TasteCheckbox-parts">高い</span>
+        </label>
+
+        <br>
+
+    <label>
+        <h3>Capacity</h3>
+        <input type="checkbox" name="SpaceSelect"  value="low" class="TasteCheckbox-input">
+        <span class="TasteCheckbox-parts">狭い</span>
+    </label>
+    <label>
+        <input type="checkbox" name="SpaceSelect"  value="middle" class="TasteCheckbox-input">
+        <span class="TasteCheckbox-parts">普通</span>
+    </label>
+    <label>
+        <input type="checkbox" name="SpaceSelect"  value="high" class="TasteCheckbox-input">
+        <span class="TasteCheckbox-parts">広い</span>
+    </label>
+
+    <label>
+        <input type="button" class="EnterButton" value="検索" onclick="clickBtn()"/>
+    </label>
+    <label>
+        <input type="button" class = "ShowList" value = "結果一覧" style = "position: absolute; right: 15px; bottom: 15px" onclick = "showList()"/>
+    </label>
+    </form>
+</body>
+</html>

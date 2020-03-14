@@ -1,0 +1,119 @@
+#form4{
+position:relative;
+margin : bottom 30px;
+width : 200px;
+height : 35px;
+}
+#sbox4{
+height:30px;
+/*padding:0 10px;*/
+position:absolute;
+left:0;
+top:0;
+border-radius:25px;
+outline:0;
+background:#eee;
+}
+#sbtn4{
+height:40px;
+width:50px;
+position:absolute;
+left:170px;
+top:0;
+background:#7fbfff;
+color:#fff;
+border:none;
+border-radius:0 25px 25px 0;
+}
+.fas-search{
+font-size:25px;
+/*margin :auto;*/
+position :relative;
+top :30%;
+left :30%;
+}
+#sbtn4:hover{
+color:#888;
+}
+
+#map { height: 70vh; width: 100vw; }
+* { margin: 0px; padding: 0px; }
+
+ /* === ボタンを表示するエリア ============================== */
+.sample1Area {
+  position       : relative;            /* 親要素が基点       */
+  margin         : auto;                /* 中央寄せ           */
+  width          : 580px;               /* ボタンの横幅       */
+  height         : 40px;                /* ボタンの高さ       */
+}
+
+ /* === ラジオボタン ======================================== */
+.sample1Area input[type="radio"] {
+  display        : none;            /* チェックボックス非表示 */
+}
+
+ /* === ラジオボタンのラベル（標準） ======================== */
+.sample1Area label {
+  display        : block;               /* ボックス要素に変更 */
+  position       : absolute;            /* 親要素からの相対位置*/
+  top            : 0;                   /* 標準表示位置(上)   */
+  bottom         : 0;                   /* 標準表示位置(下)   */
+  left           : 0;                   /* 標準表示位置(左)   */
+  right          : 0;                   /* 標準表示位置(右)   */
+  text-align     : center;              /* 文字位置は中央     */
+  line-height    : 40px;                /* 1行の高さ(中央寄せ)*/
+  font-size      : 15pt;                /* 文字サイズ         */
+  font-weight    : bold;                /* 太字               */
+  border         : 1px solid #ccc;      /* 枠線(一旦四方向)   */
+}
+
+ /* === ON側のラジオボタンのラベル（標準） ================== */
+.sample1Area #sample1on + label {
+  right          : 50%;                 /* 右端を中央に変更   */
+  border-radius  : 6px 0 0 6px;         /* 角丸(左側の上下)   */
+  background     : #eee;                /* 背景               */
+  color          : #666;                /* 文字色             */
+  border-right   : none;                /* 枠線の右側を消す   */
+}
+
+ /* === ON側のラジオボタンのラベル（ONのとき） ============== */
+.sample1Area #sample1on:checked +label {
+                                        /* 背景グラデーション */
+  background     : linear-gradient(180deg, #00b359, #006633, #00b359);
+  color          : #fff;                /* 文字色             */
+  text-shadow    : 1px 1px 1px #333;    /* 文字に影を付ける   */
+}
+
+ /* === OFF側のラジオボタンのラベル（標準） ================ */
+ .sample1Area #sample1off + label {
+   left          : 50%;                 /* 右端を中央に変更   */
+   border-radius  : 0 6px 6px 0;         /* 角丸(左側の上下)   */
+   background     : #eee;                /* 背景               */
+   color          : #666;                /* 文字色             */
+   border-left   : none;                /* 枠線の右側を消す   */
+ }
+
+ /* === OFF側のラジオボタンのラベル（OFFのとき） ============= */
+ .sample1Area #sample1off:checked +label {
+                                         /* 背景グラデーション */
+   background     : linear-gradient(180deg, #00b359, #006633, #00b359);
+   color          : #fff;                /* 文字色             */
+   text-shadow    : 1px 1px 1px #333;    /* 文字に影を付ける   */
+ }
+/*
+.sample1Area #sample1off:checked +label {
+                                        /* 背景グラデーション */
+/*  background     : linear-gradient(175deg, #ccc, #999, #ccc);
+  color          : #fff;                /* 文字色             */
+/*  text-shadow    : 1px 1px 1px #333;    /* 文字に影を付ける
+}*/
+
+/*
+.sample1Area #sample1off + label {
+  left           : 50%;                 /* 左端を中央に変更
+  border-radius  : 0 6px 6px 0;         /* 角丸(右側の上下)
+  background     : #eee;                /* 背景
+  color          : #666;                /* 文字色
+  border-left    : none;                /* 枠線の左側を消す
+}
+*/
